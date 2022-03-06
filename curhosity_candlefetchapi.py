@@ -20,7 +20,7 @@ def fetch_candles(get_params):
   candle_dict = { int(candle_df['UTC EPOCH'][i]) :{ "Open":candle_df['Open'][i] ,
                       "High":candle_df['High'][i] ,
                       "Low":candle_df['Low'][i]   ,
-                      "Close":candle_df['Close'][i] } for i in range(interval))}
+                      "Close":candle_df['Close'][i] } for i in range(interval)}
 
   json_obj = json.dumps(candle_dict , indent = 4)
   return json_obj
